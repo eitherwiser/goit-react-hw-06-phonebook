@@ -35,7 +35,7 @@ const ContactForm = ({addContact, contacts}) => {
       alert(`Person with number ${number} is already in your phonebook.`)
       return;
     }
-    addContact({id: id, name: name, number: number})
+    addContact(name,number)
     setName('');
     setNumber('');
     e.preventDefault();
