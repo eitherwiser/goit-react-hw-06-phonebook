@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +35,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.0",
+    "prop-types": "^15.7.2",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9"
+  },
+  "lint-staged": {
+    "*.{js, jsx, json}": "eslint --cache --fix",
+    "*.{js, jsx, css, scss, md, html, htm, hbs, json}": "prettier --write"
   }
 }

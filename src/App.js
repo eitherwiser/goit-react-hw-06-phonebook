@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import ContactForm from './components/Form/Form.jsx';
+import Filter from './components/Filter/Filter.jsx';
+import ContactsList from './components/ContactsList/ContactsList.jsx';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>Phonebook</h2>
+
+      <Filter />
+
+      <ContactForm />
+
+      <ContactsList />
+    </>
   );
 }
 
-export default App;
+//const [filter, setFilter] = useState('');
+//const [localStorageState, setLocalStorageState] = useState(true);
+
+//const onFilterChange = e => setFilter(e.currentTarget.value);
+
+//const onLocalStorageChange = () => {
+//  setLocalStorageState(pre => !pre);
+//};
